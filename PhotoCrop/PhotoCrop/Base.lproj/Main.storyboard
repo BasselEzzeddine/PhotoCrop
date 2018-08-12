@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4ow-xM-Zoh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6jV-lf-dLv">
+            <objects>
+                <viewController storyboardIdentifier="EditPhotoViewController" id="4ow-xM-Zoh" customClass="ViewController" customModule="PhotoCrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ssN-Br-g1a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oC-Qq-Ec8">
+                                <rect key="frame" x="170.5" y="623" width="34" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ETy-7i-nbv"/>
+                                </constraints>
+                                <state key="normal" title="Crop"/>
+                                <connections>
+                                    <action selector="button_crop_clicked:" destination="4ow-xM-Zoh" eventType="touchUpInside" id="hpf-vg-E3z"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w7a-2G-i4K">
+                                <rect key="frame" x="0.0" y="20" width="375" height="589"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="26K-WB-JES">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
+                                    </imageView>
+                                    <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcD-80-U6d">
+                                        <rect key="frame" x="24" y="130" width="327" height="327"/>
+                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BcD-80-U6d" secondAttribute="height" multiplier="1:1" id="8wC-lZ-sVe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="26K-WB-JES" firstAttribute="top" secondItem="w7a-2G-i4K" secondAttribute="top" id="DZ5-R2-fF3"/>
+                                    <constraint firstItem="26K-WB-JES" firstAttribute="leading" secondItem="w7a-2G-i4K" secondAttribute="leading" id="MjG-2j-bVV"/>
+                                    <constraint firstItem="26K-WB-JES" firstAttribute="centerX" secondItem="w7a-2G-i4K" secondAttribute="centerX" id="SK0-oS-UpT"/>
+                                    <constraint firstAttribute="trailing" secondItem="26K-WB-JES" secondAttribute="trailing" id="rhS-eK-FYS"/>
+                                    <constraint firstItem="26K-WB-JES" firstAttribute="centerY" secondItem="w7a-2G-i4K" secondAttribute="centerY" id="t74-uw-22D"/>
+                                    <constraint firstAttribute="bottom" secondItem="26K-WB-JES" secondAttribute="bottom" id="tob-Fz-A3O"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="4ow-xM-Zoh" id="8D5-ri-lzJ"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2oC-Qq-Ec8" firstAttribute="centerX" secondItem="nbw-W1-uIH" secondAttribute="centerX" id="0Hs-ui-aUv"/>
+                            <constraint firstItem="nbw-W1-uIH" firstAttribute="trailing" secondItem="BcD-80-U6d" secondAttribute="trailing" constant="24" id="2iT-nn-Fof"/>
+                            <constraint firstItem="nbw-W1-uIH" firstAttribute="trailing" secondItem="w7a-2G-i4K" secondAttribute="trailing" id="30k-1f-vFh"/>
+                            <constraint firstItem="nbw-W1-uIH" firstAttribute="bottom" secondItem="2oC-Qq-Ec8" secondAttribute="bottom" constant="14" id="Hd6-8R-jY7"/>
+                            <constraint firstItem="w7a-2G-i4K" firstAttribute="top" secondItem="nbw-W1-uIH" secondAttribute="top" id="LNJ-Fh-nOr"/>
+                            <constraint firstItem="2oC-Qq-Ec8" firstAttribute="top" secondItem="w7a-2G-i4K" secondAttribute="bottom" constant="14" id="Nj0-41-qXg"/>
+                            <constraint firstItem="w7a-2G-i4K" firstAttribute="leading" secondItem="nbw-W1-uIH" secondAttribute="leading" id="tYb-x5-MeO"/>
+                            <constraint firstItem="BcD-80-U6d" firstAttribute="leading" secondItem="nbw-W1-uIH" secondAttribute="leading" constant="24" id="w6T-IL-qGV"/>
+                            <constraint firstItem="BcD-80-U6d" firstAttribute="centerY" secondItem="nbw-W1-uIH" secondAttribute="centerY" constant="-30" id="xLu-Zv-KsY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nbw-W1-uIH"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="26K-WB-JES" id="5mG-5P-RUC"/>
+                        <outlet property="scrollView" destination="w7a-2G-i4K" id="1fF-be-n8r"/>
+                        <outlet property="view_crop" destination="BcD-80-U6d" id="ood-De-ZVy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="16r-cV-doU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="profile" width="456" height="475"/>
+    </resources>
+</document>
