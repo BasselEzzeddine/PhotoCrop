@@ -35,9 +35,8 @@
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="26K-WB-JES">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="589"/>
                                     </imageView>
-                                    <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcD-80-U6d">
-                                        <rect key="frame" x="24" y="130" width="327" height="327"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcD-80-U6d">
+                                        <rect key="frame" x="24" y="131" width="327" height="327"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="BcD-80-U6d" secondAttribute="height" multiplier="1:1" id="8wC-lZ-sVe"/>
                                         </constraints>
@@ -66,7 +65,7 @@
                             <constraint firstItem="2oC-Qq-Ec8" firstAttribute="top" secondItem="w7a-2G-i4K" secondAttribute="bottom" constant="14" id="Nj0-41-qXg"/>
                             <constraint firstItem="w7a-2G-i4K" firstAttribute="leading" secondItem="nbw-W1-uIH" secondAttribute="leading" id="tYb-x5-MeO"/>
                             <constraint firstItem="BcD-80-U6d" firstAttribute="leading" secondItem="nbw-W1-uIH" secondAttribute="leading" constant="24" id="w6T-IL-qGV"/>
-                            <constraint firstItem="BcD-80-U6d" firstAttribute="centerY" secondItem="nbw-W1-uIH" secondAttribute="centerY" constant="-30" id="xLu-Zv-KsY"/>
+                            <constraint firstItem="BcD-80-U6d" firstAttribute="centerY" secondItem="nbw-W1-uIH" secondAttribute="centerY" constant="-29" id="xLu-Zv-KsY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nbw-W1-uIH"/>
                     </view>
