@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             return
         }
         let cropRect = CGRect(x: view_crop.frame.origin.x - imageView.realImageRect().origin.x, y: view_crop.frame.origin.y - imageView.realImageRect().origin.y, width: view_crop.frame.width, height: view_crop.frame.height)
-        let croppedImage = ImageCropHandler.sharedInstance.cropImage(imageToCrop, toRect: cropRect, viewWidth: imageView.frame.width, viewHeight: imageView.frame.height)
+        let croppedImage = ImageCropHandler.sharedInstance.cropImage(imageToCrop, toRect: cropRect, imageViewWidth: imageView.frame.width, imageViewHeight: imageView.frame.height)
         imageView.image = croppedImage
         scrollView.zoomScale = 1
     }
