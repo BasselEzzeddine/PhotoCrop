@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var scrollView: UIScrollView! {
         didSet {
+            scrollView.delegate = self
             scrollView.minimumZoomScale = 1
             scrollView.maximumZoomScale = 2
         }

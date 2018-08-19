@@ -50,9 +50,6 @@
                                     <constraint firstItem="26K-WB-JES" firstAttribute="centerY" secondItem="w7a-2G-i4K" secondAttribute="centerY" id="t74-uw-22D"/>
                                     <constraint firstAttribute="bottom" secondItem="26K-WB-JES" secondAttribute="bottom" id="tob-Fz-A3O"/>
                                 </constraints>
-                                <connections>
-                                    <outlet property="delegate" destination="4ow-xM-Zoh" id="8D5-ri-lzJ"/>
-                                </connections>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
